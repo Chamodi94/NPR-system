@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://BusinessService/" xmlns:ns1="http://DataService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://BusinessService/">
+
+<xs:import namespace="http://DataService/" schemaLocation="http://localhost:8080/Business_Tier/BusinessService?xsd=1"/>
+
+<xs:element name="Adduser" type="tns:Adduser"/>
+
+<xs:element name="AdduserResponse" type="tns:AdduserResponse"/>
+
+<xs:element name="Addvehicle" type="tns:Addvehicle"/>
+
+<xs:element name="AddvehicleResponse" type="tns:AddvehicleResponse"/>
+
+<xs:element name="Allcriminalinfo" type="tns:Allcriminalinfo"/>
+
+<xs:element name="AllcriminalinfoResponse" type="tns:AllcriminalinfoResponse"/>
+
+<xs:element name="Allusers" type="tns:Allusers"/>
+
+<xs:element name="AllusersResponse" type="tns:AllusersResponse"/>
+
+<xs:element name="AllvehicleInfo" type="tns:AllvehicleInfo"/>
+
+<xs:element name="AllvehicleInfoResponse" type="tns:AllvehicleInfoResponse"/>
+
+<xs:element name="Changepassword" type="tns:Changepassword"/>
+
+<xs:element name="ChangepasswordResponse" type="tns:ChangepasswordResponse"/>
+
+<xs:element name="Deleteuser" type="tns:Deleteuser"/>
+
+<xs:element name="DeleteuserResponse" type="tns:DeleteuserResponse"/>
+
+<xs:element name="Deletevehicle" type="tns:Deletevehicle"/>
+
+<xs:element name="DeletevehicleResponse" type="tns:DeletevehicleResponse"/>
+
+<xs:element name="Login" type="tns:Login"/>
+
+<xs:element name="LoginResponse" type="tns:LoginResponse"/>
+
+<xs:element name="SearchVehicleInfo" type="tns:SearchVehicleInfo"/>
+
+<xs:element name="SearchVehicleInfoResponse" type="tns:SearchVehicleInfoResponse"/>
+
+<xs:element name="Searchcriminalhostory" type="tns:Searchcriminalhostory"/>
+
+<xs:element name="SearchcriminalhostoryResponse" type="tns:SearchcriminalhostoryResponse"/>
+
+<xs:element name="Searchcriminals" type="tns:Searchcriminals"/>
+
+<xs:element name="SearchcriminalsResponse" type="tns:SearchcriminalsResponse"/>
+
+<xs:element name="Searchuser" type="tns:Searchuser"/>
+
+<xs:element name="SearchuserResponse" type="tns:SearchuserResponse"/>
+
+<xs:element name="Searchvehicle" type="tns:Searchvehicle"/>
+
+<xs:element name="SearchvehicleResponse" type="tns:SearchvehicleResponse"/>
+
+<xs:element name="Updateuser" type="tns:Updateuser"/>
+
+<xs:element name="UpdateuserResponse" type="tns:UpdateuserResponse"/>
+
+<xs:element name="Updatevehicle" type="tns:Updatevehicle"/>
+
+<xs:element name="UpdatevehicleResponse" type="tns:UpdatevehicleResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="sendmessage" type="tns:sendmessage"/>
+
+<xs:element name="sendmessageResponse" type="tns:sendmessageResponse"/>
+
+<xs:complexType name="Allcriminalinfo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="AllcriminalinfoResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:vehicleInfo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Updatevehicle">
+<xs:sequence>
+<xs:element name="vehicleInfo" type="ns1:vehicleInfo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdatevehicleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Adduser">
+<xs:sequence>
+<xs:element name="user" type="ns1:user" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AdduserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Searchcriminals">
+<xs:sequence>
+<xs:element name="criminalno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SearchcriminalsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:vehicleInfo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Changepassword">
+<xs:sequence>
+<xs:element name="user" type="ns1:user" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="newpass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ChangepasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Searchuser">
+<xs:sequence>
+<xs:element name="userID" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SearchuserResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:user" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Allusers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="AllusersResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:user" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Deleteuser">
+<xs:sequence>
+<xs:element name="userID" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeleteuserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Deletevehicle">
+<xs:sequence>
+<xs:element name="vehivleNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeletevehicleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Addvehicle">
+<xs:sequence>
+<xs:element name="path" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddvehicleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Searchcriminalhostory">
+<xs:sequence>
+<xs:element name="vehicleno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SearchcriminalhostoryResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:vehicleInfo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SearchVehicleInfo">
+<xs:sequence>
+<xs:element name="vehicleNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SearchVehicleInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:vehicleInfo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Login">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:user" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Updateuser">
+<xs:sequence>
+<xs:element name="user" type="ns1:user" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateuserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Searchvehicle">
+<xs:sequence>
+<xs:element name="vehicleNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SearchvehicleResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:vehicleInfo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AllvehicleInfo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="AllvehicleInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:vehicleInfo" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sendmessage">
+<xs:sequence>
+<xs:element name="subject" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sendmessageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
